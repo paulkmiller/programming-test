@@ -1,14 +1,22 @@
 // #1
-
-
+.wrapper ul ul {
+  background-color: green;
+} 
 
 // #2
 
-
+.wrapper ul li:nth-child(2n){
+  color: red;
+}
 
 // #3
 
-
+.wrapper ul ul li:nth-child(3){
+  color: blue;
+}
 
 // #4
 
+.wrapper > ul > li:nth-last-of-type(-n+2){
+  visibility: hidden;
+}
