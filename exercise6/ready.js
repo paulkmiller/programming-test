@@ -1,38 +1,13 @@
-$(document).ready(function() {
-  // words for cycling through the typwriter
-  var words = ['Awesome People', 'Brave', 'Agile', 'Intelligent', 'Product People'];
+// out of time
 
-  // How often it outputs a character
-  var delay = 100;
+$(document).ready(function(){
+var delay = 100;
+var words = ['Awesome People', 'Brave', 'Agile', 'Intelligent', 'Product People'];
 
+$.each(words.split(''), function (i, letter) {
+    setTimeout(function () {
+        $('.typewriter-text').append(letter);
 
-
-
-
-  function writeText(word) {
-    // Code goes here
-
-  }
-
-  // calls the first words element, 'Awesome People', and not the rest;
-  writeText(words[0]); 
-
-
-
-
-
-
-
-
-  /* BONUS
-
-  function writeWords(words) {
-    // Code goes here
-  }
-
-  writeWords(words);
-
-  */
-
-
+    }, delay * i);
 });
+}
